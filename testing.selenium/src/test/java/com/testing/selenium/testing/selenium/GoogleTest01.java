@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,12 +22,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 public class GoogleTest01 {
 
+	//Instanciando Logger
+	Logger logger = LogManager.getLogger(GoogleTest01.class);
+	
 	//Creando un objeto WebDriver
 	private WebDriver driver;
 	
 	@Before
 	public void setUp() {
 		
+		logger.info("Iniciando metodo setUp");
 		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
