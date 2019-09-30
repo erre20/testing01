@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -38,11 +39,38 @@ public class LeeArchivoExcel {
 			
 			XSSFRow row = newSheet.getRow(i);
 			
-			for() {
+			for(int j=0; j<row.getLastCellNum(); j++) {
+				
+				System.out.println(row.getCell(j).getStringCellValue() + "||");
 				
 			}
-			
 		}
+	}
+	
+	/**
+	 * 
+	 * @param filePath
+	 * @param sheetName
+	 * @param rowNumber
+	 * @param cellNumber
+	 * @return
+	 * @throws IOException 
+	 */
+	public String getCellValue(String filePath, String sheetName, int rowNumber, int cellNumber) throws IOException {
+		
+		File file = new File(filePath);
+		
+		FileInputStream inputStream = new FileInputStream(file); 
+		
+		XSSFWorkbook newWorkBook = new XSSFWorkbook(inputStream);
+		
+		XSSFSheet newSheet = newWorkBook.getSheet(sheetName);
+		
+		XSSFRow row = newSheet.getRow(rowNumber);
+		
+		XSSFCell cell = row.getCell(cellNumber);
+		
+		return cell.getStringCellValue();
 	}
 	
 }
