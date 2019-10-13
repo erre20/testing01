@@ -28,7 +28,6 @@ public class Test_Mergeando_01 {
 		System.out.println("Conflicto virtual");
 		
 		//*****************************************************
-<<<<<<< Updated upstream
 		String nombre1 = "Cristian";
 		
 		if(nombre1.contentEquals("Cristian")) {
@@ -60,7 +59,7 @@ public class Test_Mergeando_01 {
 		for(int i=0; i<nombre1.length(); i++) {
 			System.out.println(nombre1.charAt(i));
 		}
-=======
+		
 		System.out.println("Clase 007: CONSTANTES y OPERADORES 1");
         System.out.println("Una constante es un espacio en memoria que su valor no cambia nunca.");
                
@@ -131,7 +130,6 @@ public class Test_Mergeando_01 {
         int cantidadLetras = nombre.length();//Como nombre es un objeto, puedo acceder al metodo .length() que devuelve un int
         
         System.out.println(nombre + " tiene " + cantidadLetras + " letras. La letra de la posición 5 de Cristian es: " + nombre.charAt(5));
->>>>>>> Stashed changes
 	}
 	
 }
