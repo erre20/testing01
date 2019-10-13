@@ -16,6 +16,9 @@ public class Test_Mergeando_01 {
 		System.out.println("04");
 		System.out.println("05");
 		
+		
+		System.out.println("esto va a generar un conflicto!!!");
+		
 	}
 	
 }
