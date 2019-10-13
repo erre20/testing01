@@ -5,58 +5,45 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import com.google.gson.stream.JsonReader;
 
 public class JSON_Test01 {
 
 	public static void main(String[] args) {
 		
-		//Permite parsear un JSON de json a otro tipo
-		JSONParser parser = new JSONParser();
-
+	
 		try {
 			
-			//Convertimos en objeto el archivo JSON, parseamos el JSON con el parse
-			//se puede parsear a cualquier wea, pero ahora queremos parsearlo a un objeto simplemente
-			Object objeto = parser.parse(new FileReader("C:\\Users\\Casa\\Desktop\\demo3.json"));
+			JsonReader reader = new JsonReader(new FileReader("C:\\Users\\Casa\\Desktop\\testJSON.json"));
 			
-			//Ahora, el objeto, lo parseamos a un Objeto de tipo JSON
-			JSONObject jsonObject = (JSONObject)objeto;
-			
-			//Y volvemos a parsear ahora a un String cada elemento
-			/*String fruta = (String) jsonObject.get("colors");
-			String tamanio = (String) jsonObject.get("size");
-			String color = (String) jsonObject.get("color");
-			
-			//Imprimimos en pantalla
-			System.out.println(fruta);
-			System.out.println(tamanio);
-			System.out.println(color);*/
-			
-			//Loop arreglos
-			JSONArray arregloJson = (JSONArray) jsonObject.get("colors");
-			Iterator<String> iterator = arregloJson.iterator();
-			
-			while(iterator.hasNext()) {
+			reader.beginArray();
+			while (reader.hasNext()) {
+
+				reader.beginObject();
+				while(reader.hasNext()) {
+					
+					String nombre = reader.nextName();
+					if(nombre.equals("persona")) {
+						System.out.println(reader.nextInt());
+					}
+					
+				}
 				
-				System.out.println(iterator.next());
-			
 			}
 			
 			
 		}catch(FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}catch(IOException e) {
-			e.printStackTrace();
-		}catch(ParseException e) {
-			e.printStackTrace();
-		}catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		
-	}
+		
+	}	
 
 }
