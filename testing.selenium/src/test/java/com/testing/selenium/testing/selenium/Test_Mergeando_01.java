@@ -22,6 +22,8 @@ public class Test_Mergeando_01 {
 		
 		System.out.println("esto va a generar un conflicto!!!");
 		
+		
+		System.out.println("Conflicto virtual 2");
 	}
 	
 }
