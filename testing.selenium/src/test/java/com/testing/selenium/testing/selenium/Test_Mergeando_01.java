@@ -38,6 +38,27 @@ public class Test_Mergeando_01 {
 		for(int i=0; i<nombre1.length(); i++) {
 			System.out.println(nombre1.charAt(i));
 		}
+		for(int i=0; i<nombre1.length(); i++) {
+			System.out.println(nombre1.charAt(i));
+		}
+		for(int i=0; i<nombre1.length(); i++) {
+			System.out.println(nombre1.charAt(i));
+		}
+		for(int i=0; i<nombre1.length(); i++) {
+			System.out.println(nombre1.charAt(i));
+		}
+		for(int i=0; i<nombre1.length(); i++) {
+			System.out.println(nombre1.charAt(i));
+		}
+		for(int i=0; i<nombre1.length(); i++) {
+			System.out.println(nombre1.charAt(i));
+		}
+		for(int i=0; i<nombre1.length(); i++) {
+			System.out.println(nombre1.charAt(i));
+		}
+		for(int i=0; i<nombre1.length(); i++) {
+			System.out.println(nombre1.charAt(i));
+		}
 	}
 	
 }
