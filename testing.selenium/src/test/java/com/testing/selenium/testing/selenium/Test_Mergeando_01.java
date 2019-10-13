@@ -28,6 +28,16 @@ public class Test_Mergeando_01 {
 		System.out.println("Conflicto virtual");
 		
 		//*****************************************************
+		String nombre1 = "Cristian";
+		
+		if(nombre1.contentEquals("Cristian")) {
+			System.out.println("Esto va a generar un conflictirijillo");
+		}
+		
+		
+		for(int i=0; i<nombre1.length(); i++) {
+			System.out.println(nombre1.charAt(i));
+		}
 	}
 	
 }
