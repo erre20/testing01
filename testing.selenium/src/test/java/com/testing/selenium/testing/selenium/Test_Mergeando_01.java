@@ -6,6 +6,13 @@ public class Test_Mergeando_01 {
 		
 		System.out.println("Hola ctm!!");
 		
+		System.out.println("Wena CTM");
+		System.out.println("01");
+		System.out.println("02");
+		System.out.println("03");
+		System.out.println("04");
+		System.out.println("05");
+		
 	}
 	
 }
